@@ -11,7 +11,11 @@ import type {
   EmployeePerformanceDetail
 } from '../types/dashboard';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://4.240.103.28:3001/api/v1';
+// Azure VM Configuration - Hardcoded for Azure deployment
+// VM IP: 4.240.103.28
+// Backend Port: 3001
+// Note: This is hardcoded to avoid Vite environment variable build-time issues
+const API_BASE_URL = 'http://4.240.103.28:3001/api/v1';
 
 // Create axios instance with default config
 const api = axios.create({
