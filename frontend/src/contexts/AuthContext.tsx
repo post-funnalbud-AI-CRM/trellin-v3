@@ -20,8 +20,11 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// API base URL
-const API_BASE_URL = 'http://localhost:3001/api/v1';
+// API base URL - Azure VM Configuration
+// VM IP: 4.240.103.28
+// Backend Port: 3001
+// Note: This is hardcoded to avoid Vite environment variable build-time issues
+const API_BASE_URL = 'http://4.240.103.28:3001/api/v1';
 
 // Create axios instance with base configuration
 const api = axios.create({
