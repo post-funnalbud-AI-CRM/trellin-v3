@@ -37,7 +37,7 @@ ENV NODE_ENV=development
 
 # Health check to ensure the service is running
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:5173 || exit 1
+  CMD curl -f http://0.0.0.0:5173 || exit 1
 
 # Start the Vite development server with hot reload
 # The --host 0.0.0.0 flag allows external connections (required for Docker)
@@ -97,7 +97,7 @@ ENV NODE_ENV=production
 
 # Health check to ensure the service is running
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3000 || exit 1
+  CMD curl -f http://0.0.0.0:3000 || exit 1
 
 # Serve the built application
 # The -s flag serves the app in single-page application mode (for React Router)

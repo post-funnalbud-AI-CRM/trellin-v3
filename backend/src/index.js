@@ -110,9 +110,9 @@ app.use('*', (req, res) => {
   });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Trellin Backend running on port ${PORT}`);
+// Start server - Bind to 0.0.0.0 to accept external connections
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Trellin Backend running on 0.0.0.0:${PORT}`);
   console.log(`📊 Health check: http://4.240.103.28:${PORT}/health`);
   console.log(`🗄️  Database health: http://4.240.103.28:${PORT}/health/db`);
 });

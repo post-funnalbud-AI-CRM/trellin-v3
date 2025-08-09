@@ -37,7 +37,7 @@ ENV NODE_ENV=development
 
 # Health check to ensure the service is running
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3001/health || exit 1
+  CMD curl -f http://0.0.0.0:3001/health || exit 1
 
 # Start the application in development mode with nodemon for hot reload
 CMD ["pnpm", "dev"]
@@ -79,7 +79,7 @@ ENV NODE_ENV=production
 
 # Health check to ensure the service is running
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3001/health || exit 1
+  CMD curl -f http://0.0.0.0:3001/health || exit 1
 
 # Start the application in production mode
 CMD ["pnpm", "start"]
