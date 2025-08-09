@@ -1,0 +1,46 @@
+{
+  "name": "trellin-backend",
+  "version": "1.0.0",
+  "description": "AI-Powered Customer Success Platform Backend",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "test:ai": "node test-ai.js",
+    "test:data": "node test-data.js",
+    "test:topics": "node test-topics.js",
+    "test:auto-topics": "node test-auto-topics.js",
+    "seed:emails": "node seed-emails.js",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "drizzle-kit up:pg",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [
+    "customer-success",
+    "ai",
+    "trellin"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@azure/identity": "^4.11.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "openai": "^5.12.0",
+    "postgres": "^3.4.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.9",
+    "nodemon": "^3.0.2"
+  }
+}

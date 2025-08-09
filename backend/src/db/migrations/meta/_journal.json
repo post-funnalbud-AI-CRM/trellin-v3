@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1754582015381,
+      "tag": "0000_strange_shriek",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1754633007561,
+      "tag": "0001_reflective_edwin_jarvis",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1754710823097,
+      "tag": "0002_simple_prowler",
+      "breakpoints": true
+    }
+  ]
+}
