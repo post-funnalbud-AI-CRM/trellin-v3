@@ -27,7 +27,7 @@ const config = {
   databaseUrl: process.env.DATABASE_URL,
   
   // Frontend
-  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
+  frontendUrl: process.env.FRONTEND_URL || 'http://4.240.103.28:5173',
   
   // JWT
   jwtSecret: process.env.JWT_SECRET,
@@ -48,7 +48,7 @@ const config = {
   google: {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    redirectUri: process.env.GOOGLE_REDIRECT_URI || 'http://localhost:3001/api/v1/auth/google/callback'
+    redirectUri: process.env.GOOGLE_REDIRECT_URI || 'http://4.240.103.28:3001/api/v1/auth/google/callback'
   },
   
   // Email (for future use)

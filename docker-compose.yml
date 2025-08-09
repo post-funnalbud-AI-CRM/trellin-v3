@@ -9,7 +9,7 @@ services:
     container_name: trellin-backend
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "0.0.0.0:3001:3001"
     environment:
       - NODE_ENV=development
     env_file:
@@ -30,10 +30,10 @@ services:
     container_name: trellin-frontend
     restart: unless-stopped
     ports:
-      - "5173:5173"
+      - "0.0.0.0:5173:5173"
     environment:
       - NODE_ENV=development
-      - VITE_API_URL=http://backend:3001/api/v1
+      - VITE_API_URL=http://4.240.103.28:3001/api/v1
     env_file:
       - ./frontend/.env
     depends_on:

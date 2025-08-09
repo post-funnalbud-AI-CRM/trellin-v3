@@ -19,7 +19,7 @@ const PORT = config.port;
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin: config.frontendUrl,
+  origin: [config.frontendUrl, 'http://localhost:5173', 'http://4.240.103.28:5173'],
   credentials: true,
 }));
 app.use(morgan('combined'));
@@ -113,8 +113,8 @@ app.use('*', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Trellin Backend running on port ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/health`);
-  console.log(`🗄️  Database health: http://localhost:${PORT}/health/db`);
+  console.log(`📊 Health check: http://4.240.103.28:${PORT}/health`);
+  console.log(`🗄️  Database health: http://4.240.103.28:${PORT}/health/db`);
 });
 
 export default app;
